@@ -33,7 +33,7 @@ async function processQueue() {
     console.error('Error processing request:', error);
   }
 
-  // Wait 350ms between requests (staying under 5 requests per minute for free tier)
+  // Wait 350ms between requests (staying under 1 request per second for free tier)
   await new Promise((resolve) => setTimeout(resolve, 350));
   isProcessing = false;
   processQueue();

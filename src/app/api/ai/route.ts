@@ -384,8 +384,8 @@ Format your response as a JSON object with an array of recipes like this:
         'Error saving recipe generation history:',
         historyError
       );
-    }
 
+    }
     return NextResponse.json({ recipes: allRecipes });
   } catch (error) {
     console.error('Error generating recipes:', error);
